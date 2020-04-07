@@ -49,9 +49,9 @@ Q: Ich nutze Cura zum slicen meiner STL's, kannst Du einen Guide dafür anbieten
 
 A: Zum aktuellen Zeitpbnkt kann ich nur diesen Guide für `PrusaSlicer` anbieten. Wusstest Du dass `PrusaSlicer 2.2` den `Ender 3` von Haus aus unterstützt? Vielleicht möchtest Du es ausprobieren!
 
-Q: Can you provide a 888 version for A4 sheets?
+Q: Kannst Du eine 888 Version für A4 Folien bereitstellen?
 
-A: Short answer: Good idea, a hospital also asked us for wider shields, so we did a prototype of this. Our results were mediocre at best, thus we discarded the idea and focused on the `v18` instead. Long answer: 888 punches are not close to the edge, the sheet will not bend properly around the printed part. You could solve this with extra hooks that catch the sheet at the ends. However, this would not work with thick sheets (0.8 mm) which are currently easy to buy. The wider design needs other struts, our prototype did not bend correctly so the sheet was inpossible to get on (again, 0.8 mm). We do not want to encourage you to use laser printer A4 clear sheets or laminating film! Users reported that you get headaches and vertigo after longer use. Also you cannot work on small things (dentist, stitch a wound). Especially the laminating film has bad optical properties. Further, production of injection molded parts for the original Prusa design is ramping up and sheets for the Prusa design will become common by then. Other hole layouts would be incompatible. Lastly, we found that a 297 mm wide sheet from 0.8 mm PETG is too heavy and uncomfortable. I hope these are enough reasons to not make a A4/888 version.
+A: Kurze Antwort: Gute Idee, ein Krankenhaus hat uns auch nach breiteren Schilden gefragt, und wir haben einen Prototypen gemacht. Unsere Ergebnisse waren maximal mittelmäßig, also haben wir die Idee verworfen und haben uns auf die `v18` konzentriert. Lange Antwort: 888 punches are not close to the edge, the sheet will not bend properly around the printed part. You could solve this with extra hooks that catch the sheet at the ends. However, this would not work with thick sheets (0.8 mm) which are currently easy to buy. The wider design needs other struts, our prototype did not bend correctly so the sheet was inpossible to get on (again, 0.8 mm). We do not want to encourage you to use laser printer A4 clear sheets or laminating film! Users reported that you get headaches and vertigo after longer use. Also you cannot work on small things (dentist, stitch a wound). Especially the laminating film has bad optical properties. Further, production of injection molded parts for the original Prusa design is ramping up and sheets for the Prusa design will become common by then. Other hole layouts would be incompatible. Lastly, we found that a 297 mm wide sheet from 0.8 mm PETG is too heavy and uncomfortable. I hope these are enough reasons to not make a A4/888 version.
 
 Q: Wie weiss ich dass mein Druck stabil genug ist?
 
@@ -70,7 +70,7 @@ Das ist ein Remix des original [Prusa Face Shield RC3](https://www.prusaprinters
 
 
 ### `stl/Covid-19 Shield v18.stl` und `stl/Covid-19 Shield v10.stl`
-Das sind die von mir erstellten Versionen. Alle relevanten Teile haben die selbe Geometrie und Abmessungen wie das Original. Ich habe aber die Wandstärke von 2.5 auf 1.67 mm verringert. Das ermöglicht einen sehr schnellen Druck, macht das Teil aber auch etwas flexibler. Aber vielleicht ist das ja auch kein Nachteil. Der Guide im Folgenden bezioeht sich auf dieses Modell.
+Das sind die von mir erstellten Versionen. Alle relevanten Teile haben die selbe Geometrie und Abmessungen wie das Original. Ich habe aber die Wandstärke von 2.5 auf 1.67 mm verringert. Das ermöglicht einen sehr schnellen Druck, macht das Teil aber auch etwas flexibler. Aber vielleicht ist das ja auch kein Nachteil. Der Guide im Folgenden bezieht sich auf dieses Modell.
 
 Wenn Du Probleme mit Druckbetthaftung hast, probiere `stl/Covid-19 Shield v18 Lily.stl`. Es hat lily pads an kritischen Stellen um die Haftung auf dem Druckbett zu erhöhen. Entferne sie mit einem Seitenschneider nach dem Druck.
 
@@ -84,35 +84,35 @@ Wenn Dir die obere Variante zu flexibel ist, kannst Du diese Variante ausprobier
 Anmerkung: Dies ist eine stabilere Variante der `v10`. Ich werde keine stabile Variante der `v18` erstellen, da die `v18` stabil genug ist.
 
 ### `stl/Bottom Reinforcement fast MK2 v3.stl`
-Dies ist eine optimierte Version des original der unteren Verstärkung des Prusa Schilds. Es hat keine Löcher und ebenfalls eine konstante Wandstärke von 1.67 mm. Das original hat einen 1 mm Spalt für das Plastikschild, diese Variante hat einen 0.8mm Spalt für einen festeren Sitz. Stelle sicher dass dein Plastikvisier passt bevor du die Massenproduktion startest!
+Dies ist eine optimierte Version des original der unteren Verstärkung des Prusa Schilds. Es hat keine Löcher und ebenfalls eine konstante Wandstärke von 1.67 mm. Das Original hat einen 1 mm Spalt für die Plastikfolie, diese Variante hat einen 0.8mm Spalt für einen festeren Sitz. Stelle sicher dass deine Plastikfolie passt bevor du die Massenproduktion startest!
 
 ### `stl/Bottom Reinforcement light v10.stl`
-Diese Alternative zur originalen unteren Verstärkung lässt sich wesentlich schneller drucken. (Ich schaffe 20 Stück in 53 Minuten). Es funktioniert mit allen Folienstärken, 0.25mm, 0.5mm, und 0.75mm sind bereits erfolgreich gestestet worden. Wenn Du dir unsicher bist welches Unterteil du drucken willst, nimm dieses!
+Diese Alternative zur originalen unteren Verstärkung lässt sich wesentlich schneller drucken. (Ich schaffe 20 Stück in 53 Minuten). Es funktioniert mit allen Folienstärken, 0.25mm, 0.5mm, und 0.75mm sind bereits erfolgreich gestestet worden. Wenn Du dir unsicher bist welches Unterteil du drucken willst, dann nimm dieses!
 
 Danke an Hackbroetchen für die Idee in seinem Original design: https://www.prusaprinters.org/prints/27801-easy-and-fast-bottom_reinforcement-alternative
 
 ## Druck Einstellungen
 
-Overall, the model we want to print is pretty simple. We do not want it to look super nice, it needs to be functional. There is basically one parameter that limits your maximum print speed: `Max. Volumetric Speed`. This parameter is defined in `mm³/s` (cubic millimeters per second) and tells `PrusaSlicer` the maximum amount of material your hotend is able to melt per second. The exact value for this depends on your hotend, nozzle size, material, print temperature, extruder gears... So you need to experiment with this a bit. In the end it boils down to this: You want your printer to extrude the maximum amount of material _all the time_. Luckily, you don't strictly need a large nozzle to achive this (but it helps). Even printers with 0.4 mm nozzles can reach their `Max. Volumetric Speed`.
+Grundsätzlich ist das Modell das wir drucken wollen recht einfach. Es muss nicht super schön aussehen, es muss nur funktional sein. Die Geschwindigkeit wird grundsätzlich durch einen einzigen Parameter bestimmt: `Maximale Volumengeschwindigkeit`. Dieser Parameter ist in `mm³/s` (kubikmillimeter pro Sekunde) angegeben uns sagt `PrusaSlicer` wieviel Filament das Hotend maximal pro Sekunde schmelzen kann. Der genau Wert hängt ab vom hotend, dem Düsendurchmesser, dem Material, der Düsentemperatur, der Extrudermechanik, etc... also musst Du etwas experimentieren um die beste Einstellung zu finden. Am Ende läuft es auf folgendes hinaus: Du willst dass der Drucker das Maximum an Material ausdruckt und zwar in _jedem Moment_. Glücklicherweise ist dazu nicht zwingend eine große Düse nötig (aber es hilft). Auch Drucker mit 0.4mm Düse können Ihre `Maximale Volumengeschwindigkeit` erreichen.
 
-There are some types of features that slow down your 3D printer. These includes gap filling small holes (or thin spaces between narrow outer perimeters), sharp turns of the printing direction and infill (which is basically sharp turns of the printing direction all the time). If you manage to print your model by only printing perimeters you can increase your print speed a lot!
+Es gibt einige Features die Deinen Drucker langsamer machen. Dazu gehören Lückenfüllungen in kleinen Spalten zwischen Konturlinien oder kleinen Löchern, scharfe Änderungen der Druckrichtung und Infill (das quasi ständig scharfe Richtungsänderungen erfordert). Wenn Du es schaffst Dein Modell nur aus Konturlinien zu drucken, kannst Du die Druckgeschwindigkeit stark erhöhen!
 
-The following picture shows infill (dark red) and gap fill (white). Both are slow to print.
+Das folgende Bild zeigt Infill (Dunkelrot) und Lückenfüllungen (Weiß). Beide verlandsamen den Druck.
 ![Gap Fill and Infill][gap_fill_and_infill]
 
-The following picture shows a model that only consists of a single perimeter running all around the model (creating two extrusion lines). This is much faster to print (and also gives a very nice surface!).
+Das folgende Bild zeigt ein Modell dass nur aus einer einzigen Konturlinie besteht, die einmal um das ganze Teil läuft (was zwei parallele Konturlien erzeugt). Das ist sehr viel schneller druckbar (und ergibt auch eine sehr schöne Oberfläche).
 ![Only Perimeters][only_perimeters]
 
-How can you achive this?
+Wie kann man das erreichen?
 
-First, you need a model with a constant wall width and you need to know this width. The model `stl/Covid-19 Shield v18.stl` is designed to have the exact same wall thickness of 1.67 mm everywhere. If you manage that your perimeters exactly add up to 1.67 mm, no slow gap filling or infill is needed.
+Zuerst braucht man ein Modell mit einer genau bekannten und konstanten Wandstärke. Das Modell `stl/Covid-19 Shield v18.stl` ist so erstellt dass die Wandstärke überall 1.67 mm beträgt. Wenn sich die Breiten der Konturlinien auf exakt 1.67 mm addieren dann wird kein Infill und keine Lückenfüllung mehr benötigt.
 
-Second, you need to set you extrusion width correctly. Luckily, `PrusaSlicer` can help you with this. It has a function that tells you the optimal wall thickness of your model for thin wall, see the following picture:
+Zweitens muss die Extrusionsbreite korrekt eingestrellt werden. Zum Glück kann `PrusaSlicer` dabei helfen. Es gibt eine Funktion die die optimale Wandstärke für dünne Wände anzeigt:
 ![Thin Wall Thickness][thin_wall_thickness]
 
-Here it says that the optimal thin wall thickness is 1.68 mm for two lines and 3.29 mm for 4 lines. 1.68 mm is very close to 1.67mm, so this is correctly configured! This value is influenced by the `Layer height` and the extrusion width for `Perimeters` and `External perimeters`. An extrusion width of 0.87 mm and a layer height of 0.3mm are used here for a 0.4 mm nozzle. Yes, you can actually print 0.87 mm width with a 0.4 mm nozzle (at least with an E3D nozzle). This [YouTube video by CNCKitchen](https://www.youtube.com/watch?v=9YaJ0wSKKHA) gives more info if you are interested.
+Hier wird die optimale Stärke für dünne Wände mit 1.68 mm für zwei Linien und 3.29 mm für 4 Linien angegeben. 1.68 mm ist sehr nah an 1.67mm, also haben wir mit 1.67 mm die richtige Einstellung! Dieser Wert hängt von der `Schichtdicke` und der Extrusionsbreite für `Konturlinien` und `Außenkonturen` ab. Eine Extrusionsbreite von 0.87 mm und eine Schichthöhe von 0.3 mm werden hier für eine 0.4 mm Düse verwendet. Ja, man kann tatsächlich 0.87 mm breite Linien mit einer 0.4 mm Düse drucken (zumindest mit einer E3D Düse). Dieses [YouTube video by CNCKitchen](https://www.youtube.com/watch?v=9YaJ0wSKKHA) gibt mehr Hintergrund dazu, wenn es Dich interessiert.
 
-Ok, we now have a model that is designed for this kind of print and a correct perimeter width. Let's talk about print speed. Rembember the `Max. Volumetric Speed`? This is your print speed. Configure all speeds (except for `Support material`, `Bridges`, and `Gap fill` and `First layer speed`) to your `Travel` speed. Yes, do this. You won't reach these speeds anyway (and if you actually do, can I have your printer please?). Now set the `Max. Volumetric Speed` in `Filament Settings/Advanced` to a low starting value. 8 mm³/s is a good starting point.
+Ok, jetzt haben wir ein Modell dass für diese Art zu Drucken optimiert ist und die passende Konturlinienbreite. Sprechen wir nun über Druckgeschwindigkeit. Erinnerst Du Dich an die `Maximale Volumengeschwindigkeit`? Das ist Deine Druckgeschwindigkeit. etze alle Geschwindigkeiten (abgesehen von `Stützstrukturen`, `Überbrückungen`, `Lückenfüllung`, und `Geschwindigkeit der ersten Schicht`) auf Deine `Eilgang` Geschwindigkeit. Ja, mach das. Du wirst diese Bewegungsgeschwindigkeit sowiso nicht erreichen (solltest Du die Geschwindigkeit doch erreichen: Kann ich bitte deinen Drucker haben?). Nun stelle die `Maximale Volumengeschwindigkeit` in `Filament Einstellungen/Erweiterte Einstellungen` auf einen niedrigen Startwert. 8 mm³/s ist für den Anfang ein guter Wert.
 
 Let's quickly go through some other settings that can increase your print speed: The model we are printing does not need any infill. You can safely set it to 0%. Only the hooks for the rubber band would get some and they don't need it. Also, you can disable gap filling completely. Yes, this ends up with some small holes, but saves quite some time. Also it might reduce stringing, as sometimes the gap fill material does not fit into its hole and squeezes out. Disable gap fill by setting the `Gap fill` speed to 0.
 
