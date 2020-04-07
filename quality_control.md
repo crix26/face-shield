@@ -1,22 +1,22 @@
-# Quality control for face shields
+# Qualitätskontrolle für das Behelfs Gesichtsschild
 
-Welcome to the quality control section! You being here indicates that you actually care about what you print. Congratulations!
+Willkommen zur Qualitäts-Sektion! Dass Du hier bist, zeigt dass du dich auch interessiert was Du druckst. Herzlichen Glückwunsch!
 
-**ATTENTION: THESE TESTS ONLY APPLY TO THE `v18` SHIELD! OTHER VERSIONS ARE LESS FLEXIBLE AND WILL POSSIBLY BREAK EARLIER!**
+**ACHTUNG: Diese Tests gelten nur für die `v18` Version! Andere Versionen sind nicht so flexibel und werden eher brechen!**
 
-## What your part should look like
+## Wie dein Teil aussehen sollte
 
-Actually, we can't really tell you what your printed part needs to withstand. We can only show you what our parts withstand. If your part breaks earlier, this does not automatically mean it is bad, but it is not as good as it could be! **Our part in the pictures is made from PETG, so if your part is from another material your results might be different.**
+Wir wissen nicht, was dein Teil wirklich aushalten muss. Wir können Dir nur zeigen was unsere Teile aushalten. Wenn Deine Teile eher brechen, heißt das nicht unbedingt dass sie schlecht sind, es heißt nur dass sie nicht so gut sind wie sie sein könnten! **Unser Teil in den Bildern ist aus PETG, wenn Du in anderem Material gedruckt hast, können die Ergebnisse abweichen.**
 
-To check your part, bend it the following ways, **during bending it should not crack at all!**
+Um dein teil zu prüfen, biege es wie im folgenden gezeigt. **Es sollte dabei absolut nicht brechen!**
 
-Put your part on a table and press the tabs for the plastic sheet down:
+Lege dein Teil auf den Tisch und drücke die Enden für die Plastikfolie nach Unten:
 ![Bend 1][bend1]
 
-Bend the rubber band hooks all the way to each other:
+Biege die Enden für das Gummiband zusammen:
 ![Bend 2][bend2]
 
-Bend the two sides at 90° angle **in both directions multiple times**:
+Verdrehe die beiden Seiten im Winekel von 90° gegeneinander **mehrfach in beide Richtungen**:
 ![Bend 3][bend3]
 ![Bend 4][bend4]
 
