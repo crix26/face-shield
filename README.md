@@ -1,95 +1,97 @@
-# Print Face Shields _the fast way_
-Some files and documentation on how to print the Prusa Face Shield really fast.
+# Behelfs-Gesichtsmasken SCHNELL drucken
+Einige Dateien und Dokumentation darüber wie man die Prusa Gesichtsschilde sehr schnell drucken kann.
 
 ## Disclaimer
 
+Diese Dateien werden "wie sie sind" und ohne Garantien oder Gewährleistungen irgendwelcher Art bereitgestellt. 
+
 These design files are provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
 
-This not a medical device. Consider it a Halloween constume! It is neither certified nor fit for any purpose.
+Es handelt sich ausdrücklich nicht um ein Medizinprodukt. Betrachte es als Karnevalsverkleidung! Es ist werder zertifiziert noch geeignet für irgendeine Verwendung.
 
 ## TL;DR
 
-* Use `PrusaSlicer`
-* Set all speeds (except for `Support material`, `Bridges`, `Gap fill`, and `First layer speed`) to your `Travel` speed. The speeds in reality are limited by the slicer automatically by the `Max. Volumetric Speed` of the filament. So the printer will not print that fast, but as fast as possible.
-* Set the `Max. Volumetric Speed` of the filament to set the real print speed. With a 0.4 mm nozzle, start at 8 mm³/s, increase to find the maximum of your printer. 17 mm³/s work for a E3D V6 with 0.8mm nozzle.
-* Set 0% infill
-* Set 0.87 mm extrusion width when using the `stl/Covid-19 Shield v10.stl` model
-* If the extruder skips steps (loud clacking noise), lower the `Max. Volumetric Speed`. Or try to increase the nozzle temp, so the filament melts faster.
+* Benutze den `PrusaSlicer`
+* Setze alle Geschwindigkeiten (abgesehen von `Stützstrukturen`, `Überbrückungen`, `Lückenfüllung`, und `Geschwindigkeit der ersten Schicht`) auf Deine `Eilgang` Geschwindigkeit. Die wirklich erreichten Geschwindigkeiten werden durch den Slicer automatisch auf die `Maximale Volumengeschwindigkeit` des Filaments begrenzt. Der Drucker wird nicht die oben eingestellten Geschwidigkeiten erreichen, wird aber so schnell wie möglich drucken.
+* Setze die `Maximale Volumengeschwindigkeit` des Filaments um darüber die Druckgeschwindigkeit zu steuern. Mit einer 0.4 mm Düse, beginne bei 8 mm³/s, und erhöhe den Wert um das Maximum deiner Druckers zu finden. 17 mm³/s sind für eine E3D V6 Düse mit 0.8mm OK.
+* Setze 0% Infill
+* Setze 0.87 mm Standardextrusionsbreite wenn Du das `stl/Covid-19 Shield v10.stl` Modell druckst
+* Wenn der Extruder Schritte verliert (laute, klackende Geräusche), verringere die `Maximale Volumengeschwindigkeit`. Oder erhöhe die Düsentemperatur, so dass das Filament schneller schmilzt.
 
-## Frequently Asked Questions
+## Häufig gestellte Fragen
 
-Q: That `Prusa Face Shield RC3` prints so slow and the virus is spreading exponentially! How can we be faster?
+Q: Das `Prusa Face Shield RC3` braucht sehr lange auf dem Drucker und das Virus verbreitet sich exponentiell! Wie kann der Druck beschleunigt werden?
 
-A: Good point! This is exactly the purpose of this guide/repository. I will talk you through all the important things to consider when you want to print fast.
+A: Guter Punkt! Das ist genau das Thema dieses Guides. Ich werde Dich durch alle wichtigen Dinge und Einstellungen leiten die zu beachten sind um die Druckzeit zu verringern.
 
-Q: Is your improved version strong enough? [Josef Prusa said on Twitter](https://twitter.com/josefprusa/status/1242931010641244161), that we should not change the design, because it needs to be beefy.
+Q: Ist Deine optimierte Version stark genug? [Josef Prusa sagte auf Twitter](https://twitter.com/josefprusa/status/1242931010641244161), dass wir das Design nicht ändern sollten weil es stark sein muss.
 
-A: Actually, I don't know. Josef Prusa was not specific on why it was designed the way it was. I think the updated version is also good, it might not be as rigid, instead it is more flexible. If you think the improved version is not strong enough, there are other options. If you want to be sure, print `stl/covid19_headband_rc3_no_text v1.stl`. That version is the orignal one without the text, so it prints a bit faster while being exactly as strong and beefy.
+A: Ich weiß es nicht. Josef Prusa hat keine Begründung genannt warum das Teil so designed wurde. Ich denke die optimierte Version ist auch gut. Sie ist nicht so starr wie das Original und etwas flexibler. Wenn Du meinst die verbesserte Version ist nicht stark genug, gibt es andere Optionen. Wenn Du auf der sicheren Seite sein willst, drucke `stl/covid19_headband_rc3_no_text v1.stl`. Das ist die Originalversion ohne den Text, so dass sie etwas schneller druckt.
 
-Take a look [here](quality_control.md) to see how you can abuse the part without breaking.
+Schau Dir [hier](quality_control.md) an wie man das Teil misshandeln kann ohne dass es bricht.
 
-Q: How much faster can we get?
+Q: Wie viel schneller können wir werden?
 
-A: Here are some expected printing times calculated by `PrusaSlicer` (for a Prusa i3 MK2.5 printing PETG):
+A: Hier sind einige von `PrusaSlicer` erwartete Druckzeiten berechnet für einen Prusa i3 MK2.5 mit PETG:
 
-* original file with `0.20mm SPEED` settings (one of the default profiles): 3:17h
-* original file with settings included in `covid19_headband_rc3_1pcs.3mf` from original web page: 2:36h
-* `stl/covid19_headband_rc3_no_text v1.stl` with `0.20mm SPEED` settings (one of the default profiles): 3:12h
-* `stl/Covid-19 Shield v10.stl` with optimized settings: 0:43h
-* `stl/Covid-19 Shield v10.stl` with optimized settings and a 0.8mm nozzle: 0:36h
-* `stl/Covid-19 Shield v18.stl` with optimized settings and a 0.8mm nozzle: 0:31h
+* original Datei mit `0.20mm SPEED` Einstellung (eines der Prusa Standardprofile): 3:17h
+* original Datei mit den Settings aus `covid19_headband_rc3_1pcs.3mf` von der Originalwebseite: 2:36h
+* `stl/covid19_headband_rc3_no_text v1.stl` mit `0.20mm SPEED` Einstellungen (eines der Prusa Standardprofile): 3:12h
+* `stl/Covid-19 Shield v10.stl` mit optimierten Einstellungen: 0:43h
+* `stl/Covid-19 Shield v10.stl` mit optimierten Einstellungen und einer 0.8mm Düse: 0:36h
+* `stl/Covid-19 Shield v18.stl` mit optimierten Einstellungen und einer 0.8mm Düse: 0:31h
 
-Q: I want to print overnight and do not want to get the done print every hour or so.
+Q: Ich will über Nacht drucken und nicht jede Stunde den Druck wechseln?
 
-A: You are in luck, there is a stackable version from 2 to 9 parts. It is easily printable with a 0.4mm nozzle in about an hour per headband. Config for Slic3r: `layer: 0.25mm, all speeds to 150mm/s, bridging speed to 50mm/s, gap fill to 0mm/s, PLA, enable detect bridging perimeters`.
+A: Du hast Glück, es gibt gestapelte Versionen von 2 bis 9 Teilen übereinander. Sie ist leicht in ca 1h pro Teil mit einer 0.4mm Düse druckbar. Configuration für Slic3r: `layer: 0.25mm, all speeds to 150mm/s, bridging speed to 50mm/s, gap fill to 0mm/s, PLA, enable detect bridging perimeters`.
 
-Q: I am using Cura to slice my STls, can you provide a guide for Cura?
+Q: Ich nutze Cura zum slicen meiner STL's, kannst Du einen Guide dafür anbieten?
 
-A: I am afraid that at this point, I can only provide a guide for `PrusaSlicer`. By the way: Did you know that `PrusaSlicer 2.2` supports the `Ender 3` out of the box? You might want to try that!
+A: Zum aktuellen Zeitpbnkt kann ich nur diesen Guide für `PrusaSlicer` anbieten. Wusstest Du dass `PrusaSlicer 2.2` den `Ender 3` von Haus aus unterstützt? Vielleicht möchtest Du es ausprobieren!
 
 Q: Can you provide a 888 version for A4 sheets?
 
 A: Short answer: Good idea, a hospital also asked us for wider shields, so we did a prototype of this. Our results were mediocre at best, thus we discarded the idea and focused on the `v18` instead. Long answer: 888 punches are not close to the edge, the sheet will not bend properly around the printed part. You could solve this with extra hooks that catch the sheet at the ends. However, this would not work with thick sheets (0.8 mm) which are currently easy to buy. The wider design needs other struts, our prototype did not bend correctly so the sheet was inpossible to get on (again, 0.8 mm). We do not want to encourage you to use laser printer A4 clear sheets or laminating film! Users reported that you get headaches and vertigo after longer use. Also you cannot work on small things (dentist, stitch a wound). Especially the laminating film has bad optical properties. Further, production of injection molded parts for the original Prusa design is ramping up and sheets for the Prusa design will become common by then. Other hole layouts would be incompatible. Lastly, we found that a 297 mm wide sheet from 0.8 mm PETG is too heavy and uncomfortable. I hope these are enough reasons to not make a A4/888 version.
 
-Q: How do I know my print is sturdy enough?
+Q: Wie weiss ich dass mein Druck stabil genug ist?
 
-A: Look into the [Quality Control](quality_control.md) document, there we provide some hints how your part should look like, or not look like.
+A: Schau dir das [Quality Control](quality_control.md) Dokument an, wir zeigen ein paar Hinweise wie das Teil aussehen sollte und wie nicht.
 
-Q: I guess my part failed the quality control, what can I do?
+Q: I glaube mein Teil hat den Qualitätstest nicht bestanden, was kann ich tun??
 
-A: The [Quality Control](quality_control.md) document also gives hints on what to change. Look into it again.
+A: Das [Quality Control](quality_control.md) Document gibt auch Hinweise was man ändern kann, Schau es Dir nochmal an.
 
-## Which model to print?
+## Welches Modell soll ich drucken?
 
-This repository contains multiple models that you can choose from. Let me introduce them to you:
+Dieses Repository enthält mehrere Modelle aus denen Du wählen kannst. Ich stelle sie hier vor:
 
 ### `stl/covid19_headband_rc3_no_text v1.stl`
-This a remix of the original [Prusa Face Shield RC3](https://www.prusaprinters.org/prints/25857-prusa-face-shield). I removed the text and indents from it as it slows down printing. Otherwise, this is exactly the same as the original.
+Das ist ein Remix des original [Prusa Face Shield RC3](https://www.prusaprinters.org/prints/25857-prusa-face-shield). Ich habe die Texte und Einkerbungen entfernt, da sie die Druckzeit erhöhen. Darüberhinaus ist es exakt gleich mit dem Original.
 
 
-### `stl/Covid-19 Shield v18.stl` and `stl/Covid-19 Shield v10.stl`
-These are versions that I designed myself. All the relevant features have the same geometry as the original Prusa version. However, the wall thickness is reduced from 2.5 mm to 1.67 mm. This makes it possible to print it very fast, but it gets more flexible (maybe this is not even a downside). The guide below uses this model.
+### `stl/Covid-19 Shield v18.stl` und `stl/Covid-19 Shield v10.stl`
+Das sind die von mir erstellten Versionen. Alle relevanten Teile haben die selbe Geometrie und Abmessungen wie das Original. Ich habe aber die Wandstärke von 2.5 auf 1.67 mm verringert. Das ermöglicht einen sehr schnellen Druck, macht das Teil aber auch etwas flexibler. Aber vielleicht ist das ja auch kein Nachteil. Der Guide im Folgenden bezioeht sich auf dieses Modell.
 
-If you have problems with layer adhesion, try `stl/Covid-19 Shield v18 Lily.stl`. It has lily pads at crucial points to help with adhesion. Just remove them with side cutters at the end.
+Wenn Du Probleme mit Druckbetthaftung hast, probiere `stl/Covid-19 Shield v18 Lily.stl`. Es hat lily pads an kritischen Stellen um die Haftung auf dem Druckbett zu erhöhen. Entferne sie mit einem Seitenschneider nach dem Druck.
 
-If you want to print for longer durations (e.g. over night), you can try the stacked versions. Look into `stl/stacks`. We have stacks from 2 to 9 parts. Start with a small stack and check if it prints well on your machine and that you can split the parts afterwards!
+Wenn Du über längere Zeit z.B. über Nacht drucken willst, kannst du die gestapelten Versionen ausprobieren. Im Ordner `stl/stacks` haben wir Stapel von 2 bis 9 Teilen. Fange mit einem kleinen Stapel an und schau ob es auf deinem Drucker gut augedruckt wird und teilbar ist!
 
-**ATTENTION: Make sure the two perimeters stick together well! If they don't, the finished part will be extremely weak! You can try to increase the extrusion width even further (e.g. 1.0 mm) or increase the extrusion multiplier. If you cannot manage to print parts where the two wall stick to each other, print the v10 or original RC3 instead!**
+**ACHTUNG: Stelle sicher dass die beiden Konturlinien gut zusammenhaften! Wenn sie das nicht tun, wird das fertige Teil extrem schwach sein! Du kannst versuchen die Extrusionsbreite noch weiter zu erhöhen (z.B. auf 1mm) oder den Extrusionsfaktor erhöhen. Wenn die Konturenhaftung weiterhin nicht hält, durcke das Modell v10 oder die originale RC3!**
 
 ### `stl/Covid-19 Shield 2.5mm v2.stl`
-If you think the above version is too flimsy/flexible you can go with this one. It has the same thickness as the original from Prusa. It has a constant wall thickness of 2.5 mm.
+Wenn Dir die obere Variante zu flexibel ist, kannst Du diese Variante ausprobieren. Sie hat die selbe Stärke wie das original von Prusa. Es hat eine konstante Wandstärke von 2.5 mm.
 
-Note: This a sturdy version of the `v10`. I will not provide a sturdy version of `v18`, as the `v18` is sturdy enough.
+Anmerkung: Dies ist eine stabilere Variante der `v10`. Ich werde keine stabile Variante der `v18` erstellen, da die `v18` stabil genug ist.
 
 ### `stl/Bottom Reinforcement fast MK2 v3.stl`
-This is an updated version of the original bottom reinforcement part from the Prusa shield. It has no holes and constant wall thickness of 1.67 mm as well. The original one has a 1 mm gap for the plastic sheet. This one has only 0.8 mm for a tighter fit. Make sure you plastic sheets fit into this before starting mass production!
+Dies ist eine optimierte Version des original der unteren Verstärkung des Prusa Schilds. Es hat keine Löcher und ebenfalls eine konstante Wandstärke von 1.67 mm. Das original hat einen 1 mm Spalt für das Plastikschild, diese Variante hat einen 0.8mm Spalt für einen festeren Sitz. Stelle sicher dass dein Plastikvisier passt bevor du die Massenproduktion startest!
 
 ### `stl/Bottom Reinforcement light v10.stl`
-This alternative to the original bottom reinforcement part prints much faster (I can print 20 in 53 minutes). It works for all sheet thicknessnes, 0.25mm, 0.5mm, and 0.75mm were already tested successfully. If you are unsure which bottom part you should print, choose this one!
+Diese Alternative zur originalen unteren Verstärkung lässt sich wesentlich schneller drucken. (Ich schaffe 20 Stück in 53 Minuten). Es funktioniert mit allen Folienstärken, 0.25mm, 0.5mm, und 0.75mm sind bereits erfolgreich gestestet worden. Wenn Du dir unsicher bist welches Unterteil du drucken willst, nimm dieses!
 
-Thanks to Hackbroetchen for the idea in his original design: https://www.prusaprinters.org/prints/27801-easy-and-fast-bottom_reinforcement-alternative
+Danke an Hackbroetchen für die Idee in seinem Original design: https://www.prusaprinters.org/prints/27801-easy-and-fast-bottom_reinforcement-alternative
 
-## Print Settings
+## Druck Einstellungen
 
 Overall, the model we want to print is pretty simple. We do not want it to look super nice, it needs to be functional. There is basically one parameter that limits your maximum print speed: `Max. Volumetric Speed`. This parameter is defined in `mm³/s` (cubic millimeters per second) and tells `PrusaSlicer` the maximum amount of material your hotend is able to melt per second. The exact value for this depends on your hotend, nozzle size, material, print temperature, extruder gears... So you need to experiment with this a bit. In the end it boils down to this: You want your printer to extrude the maximum amount of material _all the time_. Luckily, you don't strictly need a large nozzle to achive this (but it helps). Even printers with 0.4 mm nozzles can reach their `Max. Volumetric Speed`.
 
@@ -119,7 +121,7 @@ Now go to the `Plater` tab and slice your model. In the bottom left corner, chan
 
 You should now be good to go for your first test print with high speed settings. If this works well (and I hope it does, otherwise this guide might be crap...) you can increase the `Max. Volumetric Speed` (e.g. in steps of 2 mm³/s) until your print starts to look ugly or your extruder makes painful noises and loses steps. If this happens, you have reached the limit of your printer. Go down to the last working value (I am running a Prusa i3 MK2.5S with a 0.8 mm nozzle at 17 mm³/s).
 
-## Advanced Parameter Tuning
+## Fortgeschrittene Parameter Einstellungen
 
 Ok, you got the basic fast print working, but you want more!
 
