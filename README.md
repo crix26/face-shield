@@ -125,7 +125,7 @@ Du solltest nun bereit sein für Deinen ersten Test mit hoher Geschwindigkeit. W
 
 Ok, du hast den Druck grundsätzlich schnell laufen, aber Du willst Mehr!
 
-Du kannst die Anzahl der `Solid layers` auf der Oberseite erhöhen um die Löcher im der obersten Schicht der Haken für das Gummiband zu schliessen. Setze die Anzahl der solid layers auf 5. Es hilft außerdem `Solid infill` und `Top solid infill` auf 0.55 mm zu setzen um noch mehr Löcher zu schließen.
+Du kannst bei `Schichten und Umfängen` die Anzahl der `Massive Schichten` an der Decke erhöhen um die Löcher im der obersten Schicht der Haken für das Gummiband zu schliessen. Setze die Anzahl für `Massive Schichten` auf 5. Es hilft außerdem in den Erweiterten Einstellungen `Massives Infill` und `Oberes massives Infill` auf 0.55 mm zu setzen um noch mehr Löcher zu schließen.
 
 Du kannst außerdem den K Faktor deines Druckers feineinstellen (auch bekannt als linear advance). Stelle sicher dass der Drucker das unterstützt. Prusa drucker tun dies. Der Faktor kontrolliert praktisch den Druck in der Düse. Das ist besonders bei hohen Geschwindigkeiten wichtig. Du kannst mehr darüber in diesem Prusa Knowledge Base Artikel lesen [Prusa Knowledge Base](https://help.prusa3d.com/en/article/linear-advance_2252). Prusa empfiehlt einen Standardwert von 45 für PETG. Ich bekomme bessere Ergebnisse mit 40 bei einer 0.4 mm Düse. Mit meiner 0.8 mm Düse nutze ich aktuell einen Wert von 15.
 
