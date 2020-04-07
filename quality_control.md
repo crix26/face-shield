@@ -45,10 +45,10 @@ Du könntest auch Löcher in Deinem Teil haben:
 
 This effect can be reduced by increasing the `Extrusion width` of `External perimeters`. I found 1.0 mm working.
 Dieser Effekt kann durch verringern der `Extrusionsbreite` von `External perimeters` verbessert werden. Bei mir funktioniert ein Wert von 1.0.
-[Bend1]: pictures/bend1.jpg "Bend 1"
-[Bend2]: pictures/bend2.jpg "Bend 2"
-[Bend3]: pictures/bend3.jpg "Bend 3"
-[Bend4]: pictures/bend4.jpg "Bend 4"
-[Bend5]: pictures/bend5.jpg "Bend 5"
-[Gaps]: pictures/gaps.jpg "Gaps"
-[Holes]: pictures/holes.jpg "Holes"
+[bend1]: pictures/bend1.jpg "Bend 1"
+[bend2]: pictures/bend2.jpg "Bend 2"
+[bend3]: pictures/bend3.jpg "Bend 3"
+[bend4]: pictures/bend4.jpg "Bend 4"
+[bend5]: pictures/bend5.jpg "Bend 5"
+[gaps]: pictures/gaps.jpg "Gaps"
+[holes]: pictures/holes.jpg "Holes"
