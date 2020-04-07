@@ -34,16 +34,16 @@ Biege die beiden Enden übereinander:
 Dieses Teil hat Lücken (siehe bei den beiden oberen roten Pfeile) was zum bröseln im video oben führt:
 ![Gaps][gaps]
 
-Es gibt zwei Möglichkeiten die Lücken zu schließen: Im `PrusaSlicer` kannst Du die `Extrusionsbreite` der `External perimeters` noch weiter erhöhen (über 0.87 mm). `PrusaSlicer` wird die beiden Hüllen näher zusammenbringen (um die erforderliche Wandstärke von 1.67 mm zu erreichen). Die andere Option ist den `Extrusion multiplier` zu erhöhen und so mehr Material zu verdrucken was dann die Lücken schliessen kann.
+Es gibt zwei Möglichkeiten die Lücken zu schließen: Im `PrusaSlicer` kannst Du die `Extrusionsbreite` der `Außenkonturen` noch weiter erhöhen (über 0.87 mm). `PrusaSlicer` wird die beiden Hüllen näher zusammenbringen (um die erforderliche Wandstärke von 1.67 mm zu erreichen). Die andere Option ist den `Extrusionsfaktor` für das Filament zu erhöhen und so mehr Material zu verdrucken was dann die Lücken schliessen kann.
 
-Das Problem an den unteren beiden roten Pfeilen kann durch Verringern der `Extrusionsbreite` für `Solid infill` und `Top solid infill` auf 0.55 mm oder weniger (abhängig von Deinem Düsendurchmesser) behoben werden.
+Das Problem an den unteren beiden roten Pfeilen kann durch Verringern der `Extrusionsbreite` für `Massives Infill` und `Oberes massives Infill` auf 0.55 mm oder weniger (abhängig von Deinem Düsendurchmesser) behoben werden.
 
 ### Löcher
 
 Du könntest auch Löcher in Deinem Teil haben:
 ![Holes][holes]
 
-Dieser Effekt kann durch verringern der `Extrusionsbreite` von `External perimeters` verbessert werden. Bei mir funktioniert ein Wert von 1.0.
+Dieser Effekt kann durch verringern der `Extrusionsbreite` von `Außenkonturen` verbessert werden. Bei mir funktioniert ein Wert von 1.0.
 
 [bend1]: pictures/bend1.jpg "Bend 1"
 [bend2]: pictures/bend2.jpg "Bend 2"
