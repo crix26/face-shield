@@ -20,31 +20,31 @@ Verdrehe die beiden Seiten im Winekel von 90° gegeneinander **mehrfach in beide
 ![Bend 3][bend3]
 ![Bend 4][bend4]
 
-Bend the two sides across each other:
+Biege die beiden Enden übereinander:
 ![Bend 5][bend5]
 
-[Here](https://cloud.stratum0.org/index.php/s/fAjpCAXFLmFsxLq?path=%2FMaterialtest%20Videos) you can find a video that shows how a PLA part can be abused if printed properly (file `PLA biegen.mp4`).
+[Hier](https://cloud.stratum0.org/index.php/s/fAjpCAXFLmFsxLq?path=%2FMaterialtest%20Videos) gibt es ein Video das zeigt wie ein PLA Teil misshandelt werden kann, wenn es korrekt gedruckt ist. (file `PLA biegen.mp4`).
 
-## What your part should not look like
+## Wie dein Teil nicht aussehen sollte
 
-[Here](https://cloud.stratum0.org/index.php/s/fAjpCAXFLmFsxLq?path=%2FMaterialtest%20Videos) you can find a video that shows how a good part looks in comparison to a bad part (file `qualitätstest.MOV`).
+[Hier](https://cloud.stratum0.org/index.php/s/fAjpCAXFLmFsxLq?path=%2FMaterialtest%20Videos) ist ein Video das ein guten mit einem schlechten Teil vergleicht (file `qualitätstest.MOV`).
 
-### Gaps
+### Lücken
 
-This part contains gaps (top two red arrows) which lead to the crumbling in the video shown above:
+Dieses Teil hat Lücken (siehe bei den beiden oberen roten Pfeile) was zum bröseln im video oben führt:
 ![Gaps][gaps]
 
-You have two options to close these gaps: In `PrusaSlicer` you can increase the `Extrusion width` of `External perimeters` even more (above 0.87 mm). `PrusaSlicer` will put the two shells closer together in this case (to reach the required 1.67 mm wall thickness). The other option is to increase the `Extrusion multiplier` so more material can fill the gap.
+Es gibt zwei Möglichkeiten die Lücken zu schließen: Im `PrusaSlicer` kannst Du die `Extrusionsbreite` der `External perimeters` noch weiter erhöhen (über 0.87 mm). `PrusaSlicer` wird die beiden Hüllen näher zusammenbringen (um die erforderliche Wandstärke von 1.67 mm zu erreichen). Die andere Option ist den `Extrusion multiplier` zu erhöhen und so mehr Material zu verdrucken was dann die Lücken schliessen kann.
 
-The problem indicated by the lower red arrow can be fixed by decreasing the `Extrusion width` for `Solid infill` and `Top solid infill` to 0.55 mm or less, depending on your nozzle size.
+Das Problem an den unteren beiden roten Pfeilen kann durch Verringern der `Extrusionsbreite` für `Solid infill` und `Top solid infill` auf 0.55 mm oder weniger (abhängig von Deinem Düsendurchmesser) behoben werden.
 
-### Holes
+### Löcher
 
-You might also encounter holes in your part:
+Du könntest auch Löcher in Deinem Teil haben:
 ![Holes][holes]
 
 This effect can be reduced by increasing the `Extrusion width` of `External perimeters`. I found 1.0 mm working.
-
+Dieser Effekt kann durch verringern der `Extrusionsbreite` von `External perimeters` verbessert werden. Bei mir funktioniert ein Wert von 1.0.
 [bend1]: pictures/bend1.jpg "Bend 1"
 [bend2]: pictures/bend2.jpg "Bend 2"
 [bend3]: pictures/bend3.jpg "Bend 3"
